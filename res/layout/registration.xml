@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:id="@+id/linearlayout_registration">
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="   Sign in with Facebook   "
+                android:id="@+id/facebooklogin_registration"
+                android:textColor="#ffffff" android:textSize="20dp"
+                android:background="#3b5998" android:layout_centerHorizontal="true" android:layout_below="@+id/space6"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OR"
+                android:id="@+id/textView"
+                android:textColor="#8fcb00" android:textSize="20dp"
+                android:layout_alignLeft="@+id/facebooklogin_registration" android:layout_below="@+id/space1"
+                android:layout_alignRight="@+id/facebooklogin_registration" android:gravity="center_horizontal"
+                android:textStyle="italic"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="   Register   "
+                android:id="@+id/textView1"
+                android:textSize="25dp" android:textColor="#ff3037"
+                android:layout_centerHorizontal="true" android:layout_below="@+id/space2"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:id="@+id/username_registration"
+                android:textColor="#0ad8ff" android:layout_centerHorizontal="true" android:layout_below="@+id/space3"
+                android:layout_alignLeft="@+id/textView1" android:layout_alignRight="@+id/textView1"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:id="@+id/password_registration"
+                android:textColor="#0ad8ff"
+                android:layout_alignLeft="@+id/username_registration" android:layout_below="@+id/space4"
+                android:layout_alignRight="@+id/username_registration"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:id="@+id/register_registration"
+                android:textColor="#8fcb00"
+                android:layout_alignLeft="@+id/textView1" android:layout_below="@+id/space5"
+                android:layout_alignRight="@+id/password_registration"/>
+        <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:id="@+id/space"
+                android:layout_alignLeft="@+id/textView" android:layout_below="@+id/register_registration"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already a User?"
+                android:id="@+id/alreadyauser_textView_registration"
+                android:textStyle="italic" android:textColor="#FFFFFF"
+                android:layout_alignLeft="@+id/register_registration" android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/register_registration" android:gravity="center_horizontal"/>
+        <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:id="@+id/space1"
+                android:layout_centerHorizontal="true" android:layout_below="@+id/facebooklogin_registration"/>
+        <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:id="@+id/space2"
+                android:layout_alignLeft="@+id/textView" android:layout_below="@+id/textView"/>
+        <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:id="@+id/space3"
+                android:layout_alignLeft="@+id/textView" android:layout_below="@+id/textView1"/>
+        <Space
+                android:layout_width="20px"
+                android:layout_height="5px"
+                android:id="@+id/space4"
+                android:layout_alignLeft="@+id/textView" android:layout_below="@+id/username_registration"/>
+        <Space
+                android:layout_width="20px"
+                android:layout_height="10px"
+                android:id="@+id/space5"
+                android:layout_alignLeft="@+id/textView" android:layout_below="@+id/password_registration"/>
+        <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:id="@+id/space6"
+                android:layout_alignLeft="@+id/textView" android:layout_alignParentTop="true"/>
+        <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:id="@+id/space7" android:layout_centerHorizontal="true"
+                android:layout_above="@+id/alreadyauser_textView_registration"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="Continue Without an Account" android:id="@+id/goWithoutAccount_registration"
+                  android:textStyle="italic" android:textColor="#FFFFFF"
+                  android:gravity="center_horizontal" android:layout_centerHorizontal="true"
+                  android:layout_below="@+id/register_registration"/>
+    </RelativeLayout>
+</LinearLayout>

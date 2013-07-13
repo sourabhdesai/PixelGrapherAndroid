@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:id="@+id/relLayout_dimensions">
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Height"
+                android:id="@+id/height_editText_dimensions" android:layout_centerHorizontal="true" android:layout_centerVertical="true"
+                android:textSize="25dp" android:inputType="number" android:textColor="#0ad8ff"/>
+        <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:id="@+id/space" android:layout_centerHorizontal="true" android:layout_above="@+id/height_editText_dimensions"/>
+        <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:id="@+id/space1" android:layout_centerHorizontal="true" android:layout_below="@+id/height_editText_dimensions"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Width"
+                android:id="@+id/width_editText_dimensions" android:layout_centerHorizontal="true" android:layout_above="@+id/space"
+                android:textSize="25dp" android:textColor="#8fcb00"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set Dimensions"
+                android:id="@+id/set_button_dimensions" android:layout_centerHorizontal="true" android:layout_below="@+id/space1"
+                android:textSize="25dp" android:textStyle="bold"/>
+        <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:id="@+id/space2" android:layout_alignLeft="@+id/space" android:layout_above="@+id/width_editText_dimensions"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set the Image Dimensions (in pixels)"
+                android:id="@+id/title_textView_dimensions" android:layout_centerHorizontal="true" android:layout_above="@+id/space2"
+                android:textColor="#ff3037" android:textStyle="italic" android:textSize="17dp"/>
+        <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:id="@+id/space3"
+                android:layout_alignLeft="@+id/space" android:layout_below="@+id/set_button_dimensions"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Default Dimensions are of Screen Size"
+                android:id="@+id/textView"
+                android:layout_centerHorizontal="true" android:layout_below="@+id/space3" android:textStyle="italic"
+                android:textColor="#FFFFFF"/>
+    </RelativeLayout>
+</LinearLayout>

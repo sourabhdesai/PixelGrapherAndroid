@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:id="@+id/relLayout_functions">
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="G(x,y)=    "
+                android:id="@+id/gxy_editText_functions" android:layout_centerHorizontal="true" android:layout_centerVertical="true"
+                android:typeface="monospace"/>
+        <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:id="@+id/space" android:layout_centerHorizontal="true" android:layout_above="@+id/gxy_editText_functions"/>
+        <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:id="@+id/space1" android:layout_centerHorizontal="true" android:layout_below="@+id/gxy_editText_functions"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R(x,y)=    "
+                android:id="@+id/rxy_editText_functions" android:layout_centerHorizontal="true" android:layout_above="@+id/space"
+                android:typeface="monospace"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B(x,y)=    "
+                android:id="@+id/bxy_editText_functions" android:layout_centerHorizontal="true" android:layout_below="@+id/space1"
+                android:typeface="monospace"/>
+        <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:id="@+id/space2" android:layout_centerHorizontal="true" android:layout_below="@+id/bxy_editText_functions"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Generate"
+                android:id="@+id/generate_button_functions" android:layout_centerHorizontal="true" android:layout_below="@+id/space2"
+                android:textStyle="bold" android:textSize="25dp"/>
+    </RelativeLayout>
+</LinearLayout>

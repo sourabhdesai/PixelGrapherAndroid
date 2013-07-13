@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/linearlayout_home">
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/layout_home">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Generate a Picture"
+                android:id="@+id/genapic_button_home"
+                android:background="#ff7f85" android:textColor="#ff3037"
+                android:textSize="35dp" android:layout_centerHorizontal="true" android:layout_above="@+id/space"/>
+        <Space android:layout_width="20px" android:layout_height="20px" android:id="@+id/space1"
+               android:layout_centerHorizontal="true" android:layout_below="@+id/savedfunc_button_home"/>
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Saved Functions" android:id="@+id/savedfunc_button_home"
+                android:background="#aecb97" android:textColor="#8fcb00"
+                android:textSize="35dp"
+                android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="The PixelBin"
+                android:id="@+id/pixelbin_button_home" android:background="#90e5ff" android:textColor="#0ad8ff"
+                android:textSize="35dp"
+                android:layout_centerHorizontal="true" android:layout_below="@+id/space1"/>
+        <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:id="@+id/space" android:layout_centerHorizontal="true"
+                android:layout_above="@+id/savedfunc_button_home"/>
+        <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:id="@+id/space2" android:layout_centerHorizontal="true" android:layout_below="@+id/pixelbin_button_home"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tutorial"
+                android:id="@+id/tutorial_button_home"
+                android:layout_centerHorizontal="true" android:layout_below="@+id/space2" android:textColor="#848484"
+                android:background="#d9d9d9" android:textSize="35dp"/>
+        <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:id="@+id/space3" android:layout_centerHorizontal="true" android:layout_alignParentTop="true"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="PixelBin"
+                  android:textAlignment="center" android:singleLine="true" android:textColor="#FFFFFF"
+                  android:typeface="normal" android:textStyle="bold" android:textSize="50dp"
+                  android:layout_gravity="center" android:gravity="center"
+                  android:id="@+id/title_textview_home" android:layout_centerHorizontal="true" android:layout_below="@+id/space3"/>
+    </RelativeLayout>
+</LinearLayout>
