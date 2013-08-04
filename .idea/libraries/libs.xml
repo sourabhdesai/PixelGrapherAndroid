@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Documents/Android-Java Development Assets/TabCarouselLib/tabcarousellib/libs/nineoldandroids.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Android-Java Development Assets/TabCarouselLib/tabcarousellib/libs/android-support-v4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

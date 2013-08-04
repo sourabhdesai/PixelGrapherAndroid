@@ -3,8 +3,13 @@ package com.example.PixelBin;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.ImageFormat;
+import android.graphics.YuvImage;
+import android.util.Log;
 import com.example.PixelBin.CodeGeneration.DexCodeGenerator;
 import com.example.PixelBin.CodeGeneration.DexImageScript;
+import com.parse.ParseObject;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -28,6 +33,7 @@ public class Picture {
 
     private int width;
     private int height;
+    private String author;
     private DexImageScript imageScript;
 
     public Picture(String r, String g, String b,int width,int height) {
@@ -35,17 +41,17 @@ public class Picture {
         this.formulaG = g;
         this.formulaB = b;
 
-        this.formulaR = this.formulaR.replaceAll("width",width+"");
-        this.formulaR = this.formulaR.replaceAll("height",height+"");
-
-        this.formulaG = this.formulaG.replaceAll("width",width+"");
-        this.formulaG = this.formulaG.replaceAll("height",height+"");
-
-        this.formulaB = this.formulaB.replaceAll("width",width+"");
-        this.formulaB = this.formulaB.replaceAll("height",height+"");
-
         this.width = width;
         this.height = height;
+    }
+
+    public Picture(ParseObject pObject) {
+        this.formulaR = pObject.getString("RFunction");
+        this.formulaG = pObject.getString("GFunction");
+        this.formulaB = pObject.getString("BFunction");
+        this.width = pObject.getInt("Width");
+        this.height = pObject.getInt("Height");
+        this.author = pObject.getString("User");
     }
 
     public String getFormulaR() {
@@ -68,29 +74,79 @@ public class Picture {
         return height;
     }
 
-    public Bitmap generateBitmap() {
-        return generateBitmap(this);
+    public void evaluateScripts(Context context) throws Throwable{
+        String builtString =
+                "x = col \n"+
+                "y = row \n"+
+                "R="+this.formulaR+"\n"+
+                "G="+this.formulaG+"\n"+
+                "B="+this.formulaB+"\n"+
+                "return rgb(R,G,B)";
+        this.imageScript = DexImageScript.createScript(context,builtString);
     }
 
-    public void evaluateScripts(Context context) throws Exception {
-        String builtString = "x = col \n"+"y = row \n"+"return rgb("+this.formulaR+","+this.formulaG+","+this.formulaB+")";
-        DexImageScript imageScript = DexImageScript.createScript(context,builtString);
-    //    imageScript.createOutputBitmap(this.width,this.height);
-        this.imageScript = imageScript;
+    public Bitmap generateBitmap() throws ArithmeticException, VerifyError, NoSuchMethodError{
+    //    byte[] emptyByteArray = new byte[this.width * this.height * 3 ]; //tweak this ---YUV format has 3 bits per pixel
 
-    }
-
-    private static Bitmap generateBitmap(Picture picture) {
-        byte[] emptyByteArray = Functions_Fragment.bitmapToByteArray(Bitmap.createBitmap(picture.width,picture.height, Bitmap.Config.ARGB_8888));
-        Bitmap img = picture.imageScript.getBitmapForImageData(emptyByteArray,picture.width,picture.height);
+    //    (new YuvImage(emptyByteArray, ImageFormat.NV21,this.width,this.height,null)).getYuvData()     //how to create a YuvImage object
+        if(this.imageScript==null)  return null;
+        Bitmap img = Bitmap.createBitmap(this.width,this.height,Bitmap.Config.ARGB_8888);
+        for(int x =0;x<this.width;x++)  {
+            for(int y =0;y<this.height;y++) {
+                int Y = this.height-1-y;
+                int color = this.imageScript.getOutputColorForColorInput(255, 0, 0, 0, Y, x, this.width, this.height);
+                img.setPixel(x,y,color);
+            }
+        }
         return img;
+    }
+
+    /**
+     *
+     * @param Width
+     * @param Height
+     * @param context
+     * @return picture resized to given dimensions
+     */
+    public Bitmap generateSnapshot(int Width,int Height,Context context)    {
+        if(this.imageScript==null) {
+            try {
+                this.evaluateScripts(context);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                return null;
+            }
+        }
+        Bitmap img = Bitmap.createBitmap(Width,Height, Bitmap.Config.ARGB_8888);
+        for(int x=0;x<Width;x++)    {
+            for(int y=0;y<Height;y++)   {
+                int Y = this.height-1-y;
+                int mappedX =Math.round(x/Width)*this.width;
+                int mappedY = Math.round(Y/Height)*this.height;
+                img.setPixel(mappedX,mappedY,this.imageScript.getOutputColorForColorInput(255, 0, 0, 0, mappedY, mappedX, this.width, this.height));
+            }
+        }
+        return img;
+    }
+
+    /**
+     * Must call evaluateScripts() before using this!
+     * @param x
+     * @param y
+     * @return value at position (x,y)
+     */
+    public int getOutputAt(int x, int y)    {
+        return this.imageScript.getOutputColorForColorInput(255,0,0,0,y,x,this.width,this.height);
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
 }
 
-/*
-import android.graphics.Bitmap;import com.example.PixelBin.RGBUtilities;public class JavaClass {public double getOutput(int x, int y)	{return 0;}public double getOutputR(int x, int y)	{return "+formulas[0]+";}public double getOutputG(int x, int y)	{return "+formulas[1]+";}public double getOutputB(int x,int y)	{return "+formulas[2]+";}public double getOutputA(int x,int y)	{return "+formulas[3]+";} public Bitmap quadrant1Graph(int width,int height)	{Bitmap newPic=Bitmap.createBitmap(width,height,Bitmap.Config.ARGB_8888);for(int x=0; x<width; x++)	{for(int Y=height-1; Y>=0; Y--)	{int y=height-1-Y;int r=this.getOutputR(x,y);int g=this.getOutputG(x,y);int b=this.getOutputB(x, y);int a=this.getOutputA(x,y);if(r>255) r=255;if(g>255) g=255;if(b>255) b=255;if(a>255) a=255;int pixel=RGBUtilities.toRGBA(r,g,b,a);newPic.setPixel(x,y,pixel);}}return newPic;}}
-*/
-/*
-function toInt(n){ return Math.round(Number(n)); };function genImageArr(width,height)	{var a = 255 << 24;var pic = new Array(width);for (var x = pic.length - 1; x >= 0; x--) {pic[x] = new Array(height);for (var y = height - 1; y >= 0; y--) {pic[x][y] = (( (a << 24) | (r(x,y) << 16)) | (g(x,y) << 8)) | b(x,y);};};return pic;}
- */
+

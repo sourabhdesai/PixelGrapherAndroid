@@ -6,6 +6,7 @@ import android.text.Spannable;
 import android.text.TextWatcher;
 import android.text.style.ForegroundColorSpan;
 import android.widget.EditText;
+import com.example.PixelBin.SettingsDatabase;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,8 +18,9 @@ import android.widget.EditText;
 public class EditTextHighlighter {
     private SettingsDatabase database;
     private int defaultColor;
-    int spaceToRight;
-    int endOfWordLeft;
+    private int spaceToRight;
+    private int endOfWordLeft;
+    private TextWatcher textWatcher;
     /**
      * Initialize a new EditTextHighlighter object with three integer parameters that indicate the RGB color component values for the default color
      * @param rDefault the R component of the default text color
@@ -52,7 +54,7 @@ public class EditTextHighlighter {
      */
     public void addKeyWord(String keyword,int r, int g, int b) {
         int color = Color.rgb(r,g,b);
-
+        this.addKeyWord(keyword, color);
     }
 
     /**
@@ -61,7 +63,7 @@ public class EditTextHighlighter {
      * @param color
      */
     public void addKeyWord(String keyword,int color) {
-         this.database.addColoredWord(keyword,color);
+        this.database.addColoredWord(keyword,color);
     }
 
     /**
@@ -97,64 +99,73 @@ public class EditTextHighlighter {
     public void addSettingsToEditText(EditText editText1)   {
         final EditText editText = editText1;
         final EditTextHighlighter highlighter = this;
-        TextWatcher textWatcher = new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                //To change body of implemented methods use File | Settings | File Templates.
+        if(this.textWatcher==null) {
+            this.textWatcher = new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                    //To change body of implemented methods use File | Settings | File Templates.
 
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                //before: length of text before text was changed
-                //start: start index of changed text
-                //count: length of new text
-                System.out.println(s+"\n yo!");
-                System.out.println("Start: "+start+"\nBefore: "+before+"\nCount: "+count+"\n yo!");
-                if(s.length()>0)    {
-                    String text = s.toString();
-                    Editable editable = editText.getText();
-                    //TODO: Make the text highlight to the right color when a keyword is written
-                    if(start>=before)    { //new character(s) at the end of the text
-                        for(int i = start;i>=0;i--)  {
-                            if(s.charAt(i)== ' ')   {
-                                String word = text.substring(i);
-                                int color = highlighter.getColor(word);
-                                editable.setSpan(new ForegroundColorSpan(color),i,i+count,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-                                editText.setText(editable);
-                                break;
-                            }
-                        }
-
-                    } else  { //new character(s) in the middle of the text somewhere
-                        int left = 0;
-                        int right = 0;
-                        for(int i=start;i>=0;i--)   {
-                            if(s.charAt(i)==' ') {
-                                left = i;
-                                break;
-                            }
-                        }
-
-                        for(int i=start;i<s.length();i++)   {
-                            if(s.charAt(i)==' ') {
-                                right = i;
-                                break;
-                            }
-                        }
-                        String word = s.subSequence(left,right).toString();
-                        int color = highlighter.getColor(word);
-                        editable.setSpan(new ForegroundColorSpan(color),left,right,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-                    }
                 }
-            }
 
-            @Override
-            public void afterTextChanged(Editable s) {
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    if(s.length()>0)    {
+                        String text = s.toString();
+                        Editable editable = editText.getText();
+                        if(start>=before)    { //new character(s) at the end of the text
+                            for(int i = start+count-1;i>=0;i--)  {
+                                if(s.charAt(i)== ' ')   { //find space character to left.
+                                    String word = text.substring(i+1,start+count);
+                                    int color = highlighter.getColor(word);
+                                    editable.setSpan(new ForegroundColorSpan(color),i,start+count,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                                    //after you use setSpan, it seems as though the cursor resets back to the beginning of the edit text, this is to fix that
+                                    editText.setSelection(start+count);
+                                    break;
+                                }
+                            }
 
-            }
-        };
-        editText.addTextChangedListener(textWatcher);
+                        } else if(start != 0)  { //new character(s) in the middle of the text somewhere
+                            int left = 0;
+                            int right = start+count;
+                            for(int i=start+count-1;i>=0;i--)   {
+                                if(s.charAt(i)==' ' | i==0) {
+                                    left = i;
+                                    break;
+                                }
+                            }
+
+                            for(int i=start;i<s.length();i++)   {
+                                if(s.charAt(i)==' ') {
+                                    right = i;
+                                    break;
+                                }
+                            }
+                            String word =left<right ? s.subSequence(left+1,right).toString(): s.subSequence(left,right).toString();
+                            int color = highlighter.getColor(word);
+                            editable.setSpan(new ForegroundColorSpan(color),left,right,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                            editText.setSelection(start+count);
+                        } else  { //start is 0, text is input at beginning of text
+                            for(int n =0; n<s.length();n++) {
+                                if(s.charAt(n)==' ' || n==s.length()-1)    {
+                                    String word =n==s.length()-1?text.substring(0): text.substring(0,n);
+                                    int color = highlighter.getColor(word);
+                                    editable.setSpan(new ForegroundColorSpan(color),0,count,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                                    editText.setSelection(start+count);
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+
+                }
+            };
+        }
+        editText.addTextChangedListener(this.textWatcher);
     }
 
 }

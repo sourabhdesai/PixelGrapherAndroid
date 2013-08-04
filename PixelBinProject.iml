@@ -43,7 +43,10 @@
     <orderEntry type="library" name="android-support-v4 (3)" level="project" />
     <orderEntry type="library" name="dexmaker" level="project" />
     <orderEntry type="library" name="antlr-3.4-complete" level="project" />
-    <orderEntry type="library" name="ScrolltricksLib" level="project" />
+    <orderEntry type="module" module-name="PhotoViewLibrary" />
+    <orderEntry type="library" name="nineoldandroids" level="project" />
+    <orderEntry type="module" module-name="android-square-progressbar" />
+    <orderEntry type="module" module-name="StaggeredGridView-master" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

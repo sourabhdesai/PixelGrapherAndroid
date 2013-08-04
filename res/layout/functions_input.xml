@@ -13,7 +13,7 @@
                 android:layout_height="wrap_content"
                 android:text="G(x,y)=    "
                 android:id="@+id/gxy_editText_functions" android:layout_centerHorizontal="true" android:layout_centerVertical="true"
-                android:typeface="monospace"/>
+                android:typeface="monospace" android:textColor="#8fcb00"/>
         <Space
                 android:layout_width="20px"
                 android:layout_height="20px"
@@ -27,13 +27,13 @@
                 android:layout_height="wrap_content"
                 android:text="R(x,y)=    "
                 android:id="@+id/rxy_editText_functions" android:layout_centerHorizontal="true" android:layout_above="@+id/space"
-                android:typeface="monospace"/>
+                android:typeface="monospace" android:textColor="#ff3037"/>
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="B(x,y)=    "
                 android:id="@+id/bxy_editText_functions" android:layout_centerHorizontal="true" android:layout_below="@+id/space1"
-                android:typeface="monospace"/>
+                android:typeface="monospace" android:textColor="#0ad8ff"/>
         <Space
                 android:layout_width="20px"
                 android:layout_height="20px"

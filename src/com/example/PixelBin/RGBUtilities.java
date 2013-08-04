@@ -48,7 +48,7 @@ public class RGBUtilities {
 	 * @param b the blue component (0..255)
 	 * @return a single integer representation the rgb color (8 bits per component) rrggbb
 	 */
-	static int toRGB(int r, int g, int b) {
+	public static int toRGB(int r, int g, int b) {
 		/* Suppose that rgb is an int that encodes a color.
 		   To get separate red, green, and blue color components: *;*/
 		   

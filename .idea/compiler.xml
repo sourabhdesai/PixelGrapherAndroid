@@ -6,6 +6,11 @@
       <directory url="file://$PROJECT_DIR$/gen" includeSubdirectories="true" />
       <directory url="file://$USER_HOME$/Documents/Android-Java Development Assets/ActionBarSherlock-master/actionbarsherlock/gen" includeSubdirectories="true" />
       <directory url="file://$USER_HOME$/Documents/Android-Java Development Assets/Romannurik GUI Libraries/romannurik-code/misc/scrolltricks/gen" includeSubdirectories="true" />
+      <directory url="file://$USER_HOME$/Documents/Android-Java Development Assets/PhotoView-master/library/gen" includeSubdirectories="true" />
+      <directory url="file://$USER_HOME$/Documents/Android-Java Development Assets/StaggeredGridViewDemo-master/gen" includeSubdirectories="true" />
+      <directory url="file://$USER_HOME$/Documents/Android-Java Development Assets/StaggeredGridView-master/gen" includeSubdirectories="true" />
+      <directory url="file://$USER_HOME$/Documents/Android-Java Development Assets/TabCarouselLib/tabcarousellib/gen" includeSubdirectories="true" />
+      <directory url="file://$USER_HOME$/Documents/Android-Java Development Assets/android-square-progressbar-master/android-square-progressbar/gen" includeSubdirectories="true" />
     </excludeFromCompile>
     <resourceExtensions />
     <wildcardResourcePatterns>

@@ -4,12 +4,18 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
+import android.graphics.Matrix;
 import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Display;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import com.parse.Parse;
 import com.parse.ParseUser;
@@ -39,18 +45,33 @@ public class SplashScreen extends Activity {
 
         RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.relativeLayoutSplashScreen);
         if(PixelPowerGrapher.screenSize[0]> galaxyS4Width ||  getResources().getConfiguration().orientation == 2)   {
-            relativeLayout.setBackgroundResource(R.drawable.funky_chalkboard);
+            relativeLayout.setBackgroundResource(R.drawable.funky_chalkboard_white);
         } else {
-            relativeLayout.setBackgroundResource(R.drawable.funky_chalkboard_cropped);
+            relativeLayout.setBackgroundResource(R.drawable.funky_chalkboard_cropped_white);
         }
-        if(Build.VERSION.SDK_INT >= 16) new createAndCacheImage().execute(size);
-        else decideNextActivity();
+        if(Build.VERSION.SDK_INT >= 16) {
+            new createAndCacheImage().execute(size);
+        }
+        else {
+            Thread timer = new Thread() {
+                @Override
+                public void run()   {
+                    try {
+                        sleep(3000); //Let them look at the splash screen
+                    } catch (InterruptedException e) {
+
+                    } finally {
+                        decideNextActivity();
+                    }
+                }
+            };
+            timer.start();
+        }
     }
 
     public void moveToHomeScreen()    {
         //Code to move to home screen
         Intent intent = new Intent(this,Home_Activity.class);
-    //    intent.putExtra("CachedBackgroundLocation",imagePath);
         startActivity(intent);
         this.finish();
     }
@@ -64,9 +85,9 @@ public class SplashScreen extends Activity {
                 boolean redCondition = (x+y)%20==0;
                 boolean greenCondition = (y-x)%20==0;
                 boolean blueCondition = (x|y)%2==0;   //
-                int r=redCondition?Outputer.mapper(x,0,width,0,255):(greenCondition?Outputer.mapper(y - x, -1 * width, height, 0, 143):blueCondition?Outputer.mapper(y, 0, height, 0, 10):0);
-                int g=greenCondition?Outputer.mapper(y - x, -1 * width, height, 0, 203):redCondition?Outputer.mapper(x, 0, width, 0, 48):blueCondition?Outputer.mapper(y, 0, height, 0, 216) :0;
-                int b=blueCondition?Outputer.mapper(y, 0, height, 0, 255):greenCondition?0:redCondition?Outputer.mapper(x, 0, width, 0, 55):0;
+                int r=redCondition?Outputer.mapper(x,0,width,0,255):(greenCondition?Outputer.mapper(y - x, -1 * width, height, 0, 143):blueCondition?Outputer.mapper(y, 0, height, 0, 10):255);
+                int g=greenCondition?Outputer.mapper(y - x, -1 * width, height, 0, 203):redCondition?Outputer.mapper(x, 0, width, 0, 48):blueCondition?Outputer.mapper(y, 0, height, 0, 216) :255;
+                int b=blueCondition?Outputer.mapper(y, 0, height, 0, 255):greenCondition?0:redCondition?Outputer.mapper(x, 0, width, 0, 55):255;
                 if(r>255) r=255;
                 if(g>255) g=255;
                 if(b>255) b=255;
@@ -99,24 +120,6 @@ public class SplashScreen extends Activity {
             Bitmap img = createBackgroundImage(params[0].x,params[0].y); //screen dimensions
             PixelPowerGrapher.mainBackground = new BitmapDrawable(getResources(),img);
             PixelPowerGrapher.actionbarBackground= new BitmapDrawable(getResources(),img);
-        /*
-            // If we have external storage use it for the disk cache. Otherwise we use
-            // the cache dir
-            File cacheLocation;
-        //    if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
-          //      cacheLocation = new File(
-          //              Environment.getExternalStorageDirectory() + "/Android-BitmapCache");
-          //  } else {
-                cacheLocation = new File(getFilesDir() + "/Android-BitmapCache");
-          //  }
-            cacheLocation.mkdirs();
-
-            BitmapLruCache.Builder builder = new BitmapLruCache.Builder(getApplicationContext());
-            builder.setMemoryCacheEnabled(true).setMemoryCacheMaxSizeUsingHeapSize();
-            builder.setDiskCacheEnabled(true).setDiskCacheLocation(cacheLocation);
-
-            BitmapLruCache mCache = builder.build();
-            mCache.put("Background",img);        */
             return null;
         }
 
@@ -128,4 +131,5 @@ public class SplashScreen extends Activity {
             decideNextActivity();
         }
     }
+
 }

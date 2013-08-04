@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <net.yscs.android.square_progressbar.SquareProgressBar
+                android:id="@+id/imageHolder_SquareProgressBar_staggeredLoaders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="false"
+                android:paddingTop="20dp" android:layout_gravity="center" android:layout_centerInParent="true">
+        </net.yscs.android.square_progressbar.SquareProgressBar>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:orientation="vertical"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/textViewsHolder_LinearLayout_staggeredLoaders"
+                      android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RFunction"
+                  android:id="@+id/rfunction_textView_staggeredLoaders"
+                  android:layout_alignLeft="@+id/bfunction_textView_staggeredLoaders"
+                  android:layout_above="@+id/space1" android:textSize="17dp" android:background="#ffffff"
+                  android:textColor="#ff3037" android:layout_gravity="center"/>
+            <Space android:layout_width="20px" android:layout_height="5px" android:id="@+id/space2"
+               android:layout_above="@+id/author_textView_staggeredLoader"
+               android:layout_gravity="left|center_vertical"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GFunction"
+                  android:id="@+id/gfunction_textView_staggeredLoaders"
+                  android:layout_alignLeft="@+id/bfunction_textView_staggeredLoaders"
+                  android:layout_above="@+id/space" android:textSize="17dp" android:background="#ffffff"
+                  android:textColor="#8fcb00" android:layout_gravity="center"/>
+            <Space
+                android:layout_width="20px"
+                android:layout_height="5px"
+                android:id="@+id/space"
+                android:layout_above="@+id/bfunction_textView_staggeredLoaders"
+                android:layout_gravity="left|center_vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BFunction"
+                android:id="@+id/bfunction_textView_staggeredLoaders"
+                android:layout_above="@+id/space2" android:textSize="17dp" android:background="#ffffff"
+                android:textColor="#0ad8ff"/>
+            <Space android:layout_width="20px" android:layout_height="5px" android:id="@+id/space1"
+               android:layout_alignLeft="@+id/bfunction_textView_staggeredLoaders"
+               android:layout_above="@+id/gfunction_textView_staggeredLoaders"
+               android:layout_gravity="left|center_vertical"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="By Author"
+                    android:id="@+id/author_textView_staggeredLoader"
+                    android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:textSize="17dp"
+                    android:background="#ffffff" android:textColor="#000000" android:layout_gravity="center"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

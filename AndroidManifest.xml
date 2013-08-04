@@ -7,7 +7,7 @@
             android:minSdkVersion="15"/>
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+    <application android:label="@string/app_name" android:icon="@drawable/pixelbin_icon6_144x144_rounded" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
 
         <activity android:name="SplashScreen"
                   android:label="@string/app_name">
@@ -21,6 +21,8 @@
         <activity android:name=".Home_Activity"/>
         <activity android:name=".GeneratePicture_Activity"/>
         <activity android:name=".PictureViewer"/>
+        <activity android:name=".SavedFunctionsActivity"/>
+        <activity android:name=".ThePixelBinActivities.PixelBin_Activity"/>
     </application>
 
 </manifest>

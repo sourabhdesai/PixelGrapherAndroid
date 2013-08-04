@@ -3,10 +3,10 @@
   <component name="AndroidDesignerProfile">
     <option name="fullProfile">
       <profile>
-        <option name="device" value="2.7in QVGA" />
+        <option name="device" value="2.7in QVGA slider" />
         <option name="deviceConfiguration" value="Portrait" />
         <option name="targetHashString" value="android-17" />
-        <option name="theme" value="Sherlock.__Theme" />
+        <option name="theme" value="AppBaseTheme" />
       </profile>
     </option>
     <option name="selection" value="[Full]" />
@@ -24,7 +24,7 @@
     </option>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="System.out" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Staggered" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
   </component>
   <component name="ArtifactsWorkspaceSettings">
@@ -33,47 +33,114 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f29451a-dd90-44e0-b00e-eaae644d55ee" name="Default" comment="" />
+    <list default="true" id="8f29451a-dd90-44e0-b00e-eaae644d55ee" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Documents/Android-Java Development Assets/TabCarouselLib/tabcarousellib/tabcarousellib.iml" />
+      <change type="DELETED" beforePath="C:\Users\DESAI_628IL\Documents\Android-Java Development Assets\TabCarouselLib\tabcarousellib\TabCarouselDemo\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\DESAI_628IL\Documents\Android-Java Development Assets\TabCarouselLib\tabcarousellib\TabCarouselDemo\AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\DESAI_628IL\Documents\Android-Java Development Assets\TabCarouselLib\tabcarousellib\TabCarouselDemo\libs\android-support-v4.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\DESAI_628IL\Documents\Android-Java Development Assets\TabCarouselLib\tabcarousellib\TabCarouselDemo\proguard-project.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\DESAI_628IL\Documents\Android-Java Development Assets\TabCarouselLib\tabcarousellib\TabCarouselDemo\project.properties" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\DESAI_628IL\Documents\Android-Java Development Assets\TabCarouselLib\tabcarousellib\TabCarouselDemo\res\drawable-hdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\DESAI_628IL\Documents\Android-Java Development Assets\TabCarouselLib\tabcarousellib\TabCarouselDemo\res\drawable-mdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\DESAI_628IL\Documents\Android-Java Development Assets\TabCarouselLib\tabcarousellib\TabCarouselDemo\res\drawable-nodpi\lost_in_translation.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\DESAI_628IL\Documents\Android-Java Development Assets\TabCarouselLib\tabcarousellib\TabCarouselDemo\res\drawable-nodpi\the_prestige.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\DESAI_628IL\Documents\Android-Java Development Assets\TabCarouselLib\tabcarousellib\TabCarouselDemo\res\drawable-xhdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\DESAI_628IL\Documents\Android-Java Development Assets\TabCarouselLib\tabcarousellib\TabCarouselDemo\res\values-v11\styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\DESAI_628IL\Documents\Android-Java Development Assets\TabCarouselLib\tabcarousellib\TabCarouselDemo\res\values\strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\DESAI_628IL\Documents\Android-Java Development Assets\TabCarouselLib\tabcarousellib\TabCarouselDemo\res\values\styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\DESAI_628IL\Documents\Android-Java Development Assets\TabCarouselLib\tabcarousellib\TabCarouselDemo\src\com\android\tabcarouseldemo\ColorFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\DESAI_628IL\Documents\Android-Java Development Assets\TabCarouselLib\tabcarousellib\TabCarouselDemo\src\com\android\tabcarouseldemo\DummyListFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\DESAI_628IL\Documents\Android-Java Development Assets\TabCarouselLib\tabcarousellib\TabCarouselDemo\src\com\android\tabcarouseldemo\MainActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\DESAI_628IL\Documents\Android-Java Development Assets\TabCarouselLib\tabcarousellib\TabCarouselDemo\src\com\android\tabcarouseldemo\PagerAdapter.java" afterPath="" />
+    </list>
     <ignored path="PixelBin.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/SplashScreen.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373503178754" ignored="false" />
-    <file path="/Dummy.txt" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1372680986813" ignored="false" />
+    <file path="/SplashScreen.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1374043264553" ignored="false" />
+    <file path="/Dummy.txt" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375589470674" ignored="false" />
     <file path="/Registration_Activity.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373504470102" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373500381642" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375587846930" ignored="false" />
     <file path="/Login_Activity.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373504340806" ignored="false" />
     <file path="/login.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1372448809160" ignored="false" />
     <file path="/PixelPowerGrapher.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373273596449" ignored="false" />
-    <file path="/fragment.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373520734485" ignored="false" />
-    <file path="/Home_Activity.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373516161276" ignored="false" />
+    <file path="/fragment.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1374172698045" ignored="false" />
+    <file path="/Home_Activity.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375587860980" ignored="false" />
     <file path="/Attributions Log.txt" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1372228383081" ignored="false" />
     <file path="/PixelEffects.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1372354240173" ignored="false" />
     <file path="/ImageUtilities.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1372231993602" ignored="false" />
-    <file path="/GeneratePicture_Activity.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1372396015960" ignored="false" />
-    <file path="/Functions_Fragment.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373603739855" ignored="false" />
+    <file path="/GeneratePicture_Activity.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375284575389" ignored="false" />
+    <file path="/Functions_Fragment.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375560165298" ignored="false" />
     <file path="/ClassInfo.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1372822567317" ignored="false" />
-    <file path="/Methods_Fragment.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373503394792" ignored="false" />
-    <file path="/Dimensions_Fragment.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1372475758557" ignored="false" />
+    <file path="/Methods_Fragment.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375128986041" ignored="false" />
+    <file path="/Dimensions_Fragment.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375284462005" ignored="false" />
     <file path="/Outputer.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373330924003" ignored="false" />
     <file path="/registration.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1372449161958" ignored="false" />
-    <file path="/home.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1372453400744" ignored="false" />
-    <file path="/Picture.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373651336649" ignored="false" />
-    <file path="/PictureViewer.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373406113921" ignored="false" />
+    <file path="/home.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375465473801" ignored="false" />
+    <file path="/Picture.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375583730877" ignored="false" />
+    <file path="/PictureViewer.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375288945507" ignored="false" />
     <file path="$PROJECT_DIR$/gen/com/example/PixelBin/BuildConfig.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1372773647146" ignored="false" />
     <file path="/Methods.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1372951691624" ignored="false" />
     <file path="$USER_HOME$/Documents/Android-Java Development Assets/ActionBarSherlock-master/actionbarsherlock/gen/com/actionbarsherlock/BuildConfig.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373307908429" ignored="false" />
     <file path="/Calculator.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373327725606" ignored="false" />
-    <file path="/RGBUtilities.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373336120389" ignored="false" />
+    <file path="/RGBUtilities.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373919498123" ignored="false" />
     <file path="/DoubleWrapper.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373340160433" ignored="false" />
     <file path="/DexCodeGenerator.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373394673588" ignored="false" />
-    <file path="/DexImageScript.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373651911710" ignored="false" />
+    <file path="/DexImageScript.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375125395906" ignored="false" />
     <file path="/KeyedEditText.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373416651501" ignored="false" />
     <file path="/EditTextHighlightingSettings.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373428536344" ignored="false" />
-    <file path="/EditTextHighlighter.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373695164063" ignored="false" />
+    <file path="/EditTextHighlighter.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373860071398" ignored="false" />
     <file path="/EditTextObject.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373432980246" ignored="false" />
     <file path="/StringPhoneLattice.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373447748988" ignored="false" />
     <file path="/CustomLinkedList.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373521486621" ignored="false" />
     <file path="/SettingsDatabase.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373526941829" ignored="false" />
-    <file path="/CameraUtils.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373604980646" ignored="false" />
+    <file path="/CameraUtils.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373925699813" ignored="false" />
+    <file path="$PROJECT_DIR$/../Edit Text Color Keys/res/layout/main.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373855389543" ignored="false" />
+    <file path="$PROJECT_DIR$/../Edit Text Color Keys/AndroidManifest.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373857576361" ignored="false" />
+    <file path="$PROJECT_DIR$/../Edit Text Color Keys/build.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373854065116" ignored="false" />
+    <file path="$PROJECT_DIR$/../Edit Text Color Keys/src/com/example/Edit_Text_Color_Keys/EditTextHighlighter.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373856387904" ignored="false" />
+    <file path="$PROJECT_DIR$/../Edit Text Color Keys/src/com/example/Edit_Text_Color_Keys/StringPhoneLattice.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373854204928" ignored="false" />
+    <file path="$PROJECT_DIR$/../Edit Text Color Keys/src/com/example/Edit_Text_Color_Keys/main_activity.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373857548184" ignored="false" />
+    <file path="/main_activity.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373861074498" ignored="false" />
+    <file path="$PROJECT_DIR$/../Edit Text Color Keys/src/com/example/Edit_Text_Color_Keys/SettingsDatabase.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373858045120" ignored="false" />
+    <file path="$PROJECT_DIR$/../EditText Color Keys/AndroidManifest.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373859013666" ignored="false" />
+    <file path="$PROJECT_DIR$/../EditText Color Keys/res/values/strings.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373858669309" ignored="false" />
+    <file path="$PROJECT_DIR$/../EditText Color Keys/src/com/example/EditText_Color_Keys/MyActivity.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373858750843" ignored="false" />
+    <file path="$PROJECT_DIR$/../EditText Color Keys/res/layout/main.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373858693057" ignored="false" />
+    <file path="$PROJECT_DIR$/../EditText Color Keys/build.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373858670000" ignored="false" />
+    <file path="/MyActivity.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373858750843" ignored="false" />
+    <file path="$PROJECT_DIR$/../EditText Color Keys/src/com/example/EditText_Color_Keys/main_activity.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373862356919" ignored="false" />
+    <file path="$PROJECT_DIR$/../EditText Color Keys/src/com/example/EditText_Color_Keys/EditTextHighlighter.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373862363747" ignored="false" />
+    <file path="$PROJECT_DIR$/../EditText Color Keys/src/com/example/EditText_Color_Keys/SettingsDatabase.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373862376126" ignored="false" />
+    <file path="$PROJECT_DIR$/../EditText Color Keys/src/com/example/EditText_Color_Keys/StringPhoneLattice.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373862369536" ignored="false" />
+    <file path="$PROJECT_DIR$/../EditText Color Keys/gen/com/example/EditText_Color_Keys/BuildConfig.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373859017009" ignored="false" />
+    <file path="$PROJECT_DIR$/../EditText Color Keys/gen/com/example/EditText_Color_Keys/Manifest.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373859017009" ignored="false" />
+    <file path="$PROJECT_DIR$/../EditText Color Keys/gen/com/example/EditText_Color_Keys/R.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373859017009" ignored="false" />
+    <file path="$PROJECT_DIR$/../EditText Color Keys/LICENSE.txt" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373862159664" ignored="false" />
+    <file path="/LICENSE.txt" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373862159664" ignored="false" />
+    <file path="$PROJECT_DIR$/../EditText Color Keys/NOTICE.txt" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373862248131" ignored="false" />
+    <file path="/fragment_activity.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1373998167671" ignored="false" />
+    <file path="/main.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1374038959265" ignored="false" />
+    <file path="/fade.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1374131918535" ignored="false" />
+    <file path="/methods.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375124757921" ignored="false" />
+    <file path="/SavedFunctionsActivity.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375587068097" ignored="false" />
+    <file path="/saved_functions.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375286143846" ignored="false" />
+    <file path="/ExpandableListViewAdapter.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375290656741" ignored="false" />
+    <file path="/group_row.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375364720669" ignored="false" />
+    <file path="/project.properties" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375402237529" ignored="false" />
+    <file path="/fadeout.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375413924248" ignored="false" />
+    <file path="/CarouselContainer.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375457101300" ignored="false" />
+    <file path="/CarouselFragmentActivity.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375460035712" ignored="false" />
+    <file path="/ImageFragment.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375474560783" ignored="false" />
+    <file path="/image_fragment.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375471796673" ignored="false" />
+    <file path="/PixelBin_Activity.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375565873401" ignored="false" />
+    <file path="/pixelbin.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375565146132" ignored="false" />
+    <file path="/Newest_Fragment.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375586957323" ignored="false" />
+    <file path="/Top_Fragment.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375586826256" ignored="false" />
+    <file path="/Search_Fragment.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375566067271" ignored="false" />
+    <file path="/top.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375566501409" ignored="false" />
+    <file path="$PROJECT_DIR$/src/com/example/PixelBin/CodeGeneration/DexCodeGenerator.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375587425991" ignored="false" />
+    <file path="/loading_image.xml" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375585456726" ignored="false" />
+    <file path="/StaggeredAdapter.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375586374205" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/com/example/PixelBin/R.java" changelist="8f29451a-dd90-44e0-b00e-eaae644d55ee" time="1375587894864" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,21 +199,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EditTextHighlighter.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/EditTextHighlighter.java">
+      <file leaf-file-name="PixelBin_Activity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/ThePixelBinActivities/PixelBin_Activity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="149" column="64" selection-start="5622" selection-end="5622" vertical-scroll-proportion="4.387097">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="35" column="68" selection-start="1450" selection-end="1450" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringPhoneLattice.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/StringPhoneLattice.java">
+      <file leaf-file-name="Newest_Fragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/ThePixelBinActivities/Newest_Fragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
+            <state line="53" column="33" selection-start="2034" selection-end="2034" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Top_Fragment.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/ThePixelBinActivities/Top_Fragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="0" selection-start="1183" selection-end="1183" vertical-scroll-proportion="0.16759777">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="staggered_image_loaders.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/staggered_image_loaders.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="44" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StaggeredGridView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Documents/Android-Java Development Assets/StaggeredGridView-master/src/com/origamilabs/library/views/StaggeredGridView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="303" column="0" selection-start="9867" selection-end="9867" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StaggeredAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/ThePixelBinActivities/StaggeredAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="104" column="36" selection-start="4612" selection-end="4612" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SquareProgressBar.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Documents/Android-Java Development Assets/android-square-progressbar-master/android-square-progressbar/src/net/yscs/android/square_progressbar/SquareProgressBar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="18" selection-start="1623" selection-end="1623" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -155,48 +268,9 @@
       <file leaf-file-name="Functions_Fragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/Functions_Fragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="7" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+            <state line="49" column="24" selection-start="1619" selection-end="1619" vertical-scroll-proportion="0.0">
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DexImageScript.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/CodeGeneration/DexImageScript.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="230" column="48" selection-start="8275" selection-end="8292" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CameraUtils.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/CodeGeneration/CameraUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="192" column="35" selection-start="8051" selection-end="8051" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Picture.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/Picture.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="39" selection-start="2262" selection-end="2262" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/home.xml">
-          <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
           </provider>
         </entry>
       </file>
@@ -207,25 +281,33 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/Documents/Android-Java Development Assets/TabCarouselLib/tabcarousellib" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/layout/login.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/PixelBin/Login_Activity.java" />
-        <option value="$PROJECT_DIR$/src/com/example/PixelBin/Registration_Activity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/PixelBin/CodeGeneration/PixelBin_Activity.java" />
+        <option value="$PROJECT_DIR$/res/layout/pixelbin.xml" />
+        <option value="$PROJECT_DIR$/res/layout/search.xml" />
+        <option value="$PROJECT_DIR$/res/layout/newest.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/PixelBin/ThePixelBinActivities/PixelBin_Activity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/PixelBin/ThePixelBinActivities/Search_Fragment.java" />
+        <option value="$PROJECT_DIR$/res/layout/top.xml" />
+        <option value="$PROJECT_DIR$/res/layout/staggeredImageLoaders.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/PixelBin/Picture.java" />
+        <option value="$PROJECT_DIR$/res/layout/loading_image.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/PixelBin/ThePixelBinActivities/StaggeredAdapter.java" />
+        <option value="$PROJECT_DIR$/src/com/example/PixelBin/ThePixelBinActivities/Top_Fragment.java" />
+        <option value="$PROJECT_DIR$/src/com/example/PixelBin/SavedFunctionsActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/PixelBin/ThePixelBinActivities/Newest_Fragment.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/example/PixelBin/Home_Activity.java" />
-        <option value="$PROJECT_DIR$/src/com/example/PixelBin/CodeGeneration/CustomLinkedList.java" />
-        <option value="$PROJECT_DIR$/src/com/example/PixelBin/CustomLinkedList.java" />
-        <option value="$PROJECT_DIR$/src/com/example/PixelBin/SettingsDatabase.java" />
-        <option value="$PROJECT_DIR$/res/layout/home.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/PixelBin/Functions_Fragment.java" />
-        <option value="$PROJECT_DIR$/src/com/example/PixelBin/CodeGeneration/CameraUtils.java" />
-        <option value="$PROJECT_DIR$/src/com/example/PixelBin/Picture.java" />
-        <option value="$PROJECT_DIR$/src/com/example/PixelBin/CodeGeneration/DexImageScript.java" />
-        <option value="$PROJECT_DIR$/res/layout/functions_input.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/PixelBin/EditTextHighlighter.java" />
-        <option value="$PROJECT_DIR$/src/com/example/PixelBin/StringPhoneLattice.java" />
       </list>
     </option>
   </component>
@@ -304,6 +386,10 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PixelBin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -315,11 +401,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PixelBin" />
+              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -330,41 +412,41 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/com/example/PixelBin" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/com/example" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.12804097" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Android-Java Development Assets/Romannurik GUI Libraries/romannurik-code/misc/scrolltricks" />
-    <property name="AndroidLayoutSelectedEditor" value="android-designer" />
+    <property name="options.lastSelected" value="web.server" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Android-Java Development Assets/StaggeredGridView-master" />
+    <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="project.structure.side.proportion" value="0.14836796" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.0.9:5555" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.1.104:5555" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="MyAvd0" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="C:\Users\DESAI_628IL\IdeaProjects\PixelBinProject\lib" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="Downloaded.Files.Path" value="C:\Users\DESAI_628IL\IdeaProjects\PixelBinProject\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.PixelBin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\DESAI_628IL\Documents\Android-Java Development Assets\Romannurik GUI Libraries\romannurik-code\misc\scrolltricks\libs" />
-      <recent name="C:\Users\DESAI_628IL\IdeaProjects\PixelBinProject\src\com\example\PixelBin\CodeGeneration" />
+      <recent name="C:\Users\DESAI_628IL\IdeaProjects\PixelBinProject\res\drawable-hdpi" />
+      <recent name="C:\Users\DESAI_628IL\IdeaProjects\PixelBinProject\res\raw" />
       <recent name="C:\Users\DESAI_628IL\IdeaProjects\PixelBinProject\libs" />
-      <recent name="C:\Users\DESAI_628IL\IdeaProjects\PixelBinProject\src\com\example\PixelBin" />
-      <recent name="C:\Users\DESAI_628IL\Documents\Android-Java Development Assets\ActionBarSherlock-master\actionbarsherlock\libs" />
+      <recent name="C:\Users\DESAI_628IL\IdeaProjects\PixelBinProject\src\com\example\PixelBin\TabCarouselCode" />
+      <recent name="C:\Users\DESAI_628IL\IdeaProjects\PixelBinProject\res\drawable-xxhdpi" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\DESAI_628IL\IdeaProjects\PixelBinProject\assets" />
@@ -408,19 +490,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -447,6 +516,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -591,36 +673,36 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6061644" sideWeight="0.5007576" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36177474" sideWeight="0.4939394" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5479452" sideWeight="0.5037879" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45376712" sideWeight="0.4909091" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6712329" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6712329" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13787879" sideWeight="0.6369863" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28938356" sideWeight="0.4969697" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3242424" sideWeight="0.70719177" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19621213" sideWeight="0.54452056" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21917808" sideWeight="0.4969697" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32272726" sideWeight="0.54452056" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17575757" sideWeight="0.70719177" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1719697" sideWeight="0.54452056" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.4969697" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.4969697" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -684,107 +766,119 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Documents/Android-Java Development Assets/Romannurik GUI Libraries/romannurik-code/misc/scrolltricks/src/com/example/android/scrolltricks/QuickReturnFragment.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/Picture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="13" selection-start="931" selection-end="931" vertical-scroll-proportion="0.0" />
+        <state line="125" column="24" selection-start="4045" selection-end="4045" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/Android-Java Development Assets/Romannurik GUI Libraries/romannurik-code/misc/scrolltricks/src/com/example/android/scrolltricks/StickyFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="13" selection-start="931" selection-end="931" vertical-scroll-proportion="0.0" />
+    <entry file="file://$PROJECT_DIR$/res/layout/loading_image.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="21" column="84" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/Android-Java Development Assets/Romannurik GUI Libraries/romannurik-code/misc/scrolltricks/src/com/example/android/scrolltricks/MainActivity.java">
+    <entry file="file://C:/Program Files (x86)/Android/android-sdk/sources/android-17/android/view/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="54" selection-start="1583" selection-end="1602" vertical-scroll-proportion="0.0" />
+        <state line="9303" column="17" selection-start="359482" selection-end="359482" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/Registration_Activity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/ThePixelBinActivities/PixelBin_Activity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="41" selection-start="3713" selection-end="3713" vertical-scroll-proportion="0.03046595" />
+        <state line="35" column="68" selection-start="1450" selection-end="1450" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/Login_Activity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/SavedFunctionsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="24" selection-start="3831" selection-end="3831" vertical-scroll-proportion="0.0" />
+        <state line="279" column="58" selection-start="11808" selection-end="11808" vertical-scroll-proportion="0.71374047">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/ThePixelBinActivities/StaggeredAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="36" selection-start="4612" selection-end="4612" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/Android-Java Development Assets/android-square-progressbar-master/android-square-progressbar/src/net/yscs/android/square_progressbar/SquareProgressView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="16" selection-start="5005" selection-end="5005" vertical-scroll-proportion="1.7066015" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/Android-Java Development Assets/android-square-progressbar-master/android-square-progressbar/src/net/yscs/android/square_progressbar/SquareProgressBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="18" selection-start="1623" selection-end="1623" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="72" selection-start="1355" selection-end="1355" vertical-scroll-proportion="0.40697673">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/Home_Activity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="81" selection-start="1543" selection-end="1543" vertical-scroll-proportion="-0.49283153" />
+        <state line="95" column="32" selection-start="3483" selection-end="3483" vertical-scroll-proportion="0.5202952">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/CodeGeneration/DexCodeGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/ThePixelBinActivities/Newest_Fragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="13" selection-start="1434" selection-end="1434" vertical-scroll-proportion="-15.841713" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/CodeGeneration/CameraUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="35" selection-start="8051" selection-end="8051" vertical-scroll-proportion="0.0">
+        <state line="53" column="33" selection-start="2034" selection-end="2034" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/CodeGeneration/DexImageScript.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="48" selection-start="8275" selection-end="8292" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/Picture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="39" selection-start="2262" selection-end="2262" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/SettingsDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="42" selection-start="1967" selection-end="1967" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/functions_input.xml">
-      <provider selected="true" editor-type-id="android-designer">
+    <entry file="file://$PROJECT_DIR$/res/layout/staggered_image_loaders.xml">
+      <provider editor-type-id="android-designer">
         <state />
       </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/home.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="44" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/Functions_Fragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="7" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+        <state line="49" column="24" selection-start="1619" selection-end="1619" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/StringPhoneLattice.java">
+    <entry file="file://$USER_HOME$/Documents/Android-Java Development Assets/StaggeredGridView-master/src/com/origamilabs/library/views/StaggeredGridView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
+        <state line="303" column="0" selection-start="9867" selection-end="9867" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/EditTextHighlighter.java">
+    <entry file="file://$PROJECT_DIR$/project.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="64" selection-start="5622" selection-end="5622" vertical-scroll-proportion="4.387097">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/PixelBin/ThePixelBinActivities/Top_Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="1183" selection-end="1183" vertical-scroll-proportion="0.16759777">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -822,7 +916,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.14836796" />
               </list>
             </option>
           </splitter-proportions>
@@ -830,11 +924,11 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.6</last-edited>
+          <last-edited>Android 4.2.2 Platform</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.14836796" />
               </list>
             </option>
           </splitter-proportions>
@@ -847,6 +941,7 @@
             <option name="proportions">
               <list>
                 <option value="0.14836796" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -866,7 +961,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>android-support-v4 (2)</last-edited>
+          <last-edited>nineoldandroids</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

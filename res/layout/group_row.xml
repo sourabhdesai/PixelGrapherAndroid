@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:background="#ffffff">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/deleteTxtView" android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/row_name"
+                android:src="@drawable/delete"
+                android:background="@drawable/delete" android:layout_alignBottom="@+id/row_name"/>
+        <TextView android:id="@+id/row_name"
+                  android:paddingLeft="50px"
+                  android:textSize="20px"
+                  android:textStyle="normal"
+                  android:layout_width="wrap_content"
+                  android:layout_height="46dp" android:textColor="#000000"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/uploadTextView"
+                android:background="@drawable/upload"
+                android:layout_alignParentEnd="false"
+                android:layout_toLeftOf="@+id/space" android:layout_alignTop="@+id/deleteTxtView"/>
+        <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:id="@+id/space" android:layout_toLeftOf="@+id/deleteTxtView"
+                android:layout_alignBottom="@+id/deleteTxtView"/>
+    </RelativeLayout>
+
+</LinearLayout>

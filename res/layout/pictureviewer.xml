@@ -5,8 +5,30 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imageView_pictureviewer" android:layout_gravity="center" android:adjustViewBounds="true"/>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView_pictureviewer" android:layout_gravity="center" android:adjustViewBounds="true"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/save_imageButton_pictureviewer" android:layout_centerHorizontal="true"
+                android:layout_alignBottom="@+id/imageView_pictureviewer" android:src="@drawable/save"
+                />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Position"
+                android:id="@+id/position_textView_pictureviewer" android:layout_alignRight="@+id/imageView_pictureviewer"
+                android:layout_alignTop="@+id/imageView_pictureviewer" android:textSize="20dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Color"
+                android:id="@+id/color_textView_pictureviewer" android:layout_alignRight="@+id/imageView_pictureviewer"
+                android:layout_below="@+id/position_textView_pictureviewer" android:textSize="20dp"/>
+    </RelativeLayout>
 </LinearLayout>

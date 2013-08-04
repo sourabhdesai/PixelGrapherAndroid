@@ -448,7 +448,7 @@ public class DexCodeGenerator {
     		String result = generateInstructionsForSubtree(tree.getChild(0), context);
     		ReturnInstruction inst = new ReturnInstruction(result);
     		context.instructions.add(inst);
-    		return ""; // shouldn't be used because this should be a top-level statement
+    		return ""; // shouldn't be used because this should be a staggered_image_loaders-level statement
     	}
         else if ("BLOCK".equals(token)) {
             for (int ii=0; ii<tree.getChildCount(); ii++) {
@@ -483,12 +483,12 @@ public class DexCodeGenerator {
             }
         }
         else if ("while".equals(token)) {
-            // put label before test, if condition is false jump to exit, at end of loop jump to top
+            // put label before test, if condition is false jump to exit, at end of loop jump to staggered_image_loaders
             String topLabelName = context.nextLabel();
             String exitLabelName = context.nextLabel();
             context.instructions.add(new LabelInstruction(topLabelName));
             generateInstructionsForBooleanExpression(tree.getChild(0), exitLabelName, context);
-            // loop body, then jump back to top
+            // loop body, then jump back to staggered_image_loaders
             generateInstructions(tree.getChild(1), context);
             context.instructions.add(new JumpInstruction(topLabelName));
             // exit label
@@ -514,14 +514,14 @@ public class DexCodeGenerator {
             
             // set loop index to start
             resolveLocal(loopStartExpr, context, loopIndexLocal);
-            // top label
+            // staggered_image_loaders label
             context.instructions.add(new LabelInstruction(topLabelName));
             // jump to end if loop limit reached
             resolveLocal(loopEndExpr, context, tmpLocal);
             context.instructions.add(new CompareInstruction(loopIndexLocal, Comparison.GE, tmpLocal, exitLabelName));
             // loop body
             generateInstructions(tree.getChild(numChildren-1), context);
-            // increment loop index, then jump back to top
+            // increment loop index, then jump back to staggered_image_loaders
             resolveLocal(stepExpr, context, tmpLocal);
             context.instructions.add(new BinaryIntOperation(loopIndexLocal, BinaryOp.ADD, loopIndexLocal, tmpLocal));
             context.instructions.add(new JumpInstruction(topLabelName));

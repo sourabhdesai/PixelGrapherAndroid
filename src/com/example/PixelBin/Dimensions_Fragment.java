@@ -35,16 +35,13 @@ public class Dimensions_Fragment extends SherlockFragment {
     @Override
     public void onStart() {
         super.onStart();
-        getActivity().setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         if(Build.VERSION.SDK_INT >= 16)setBackgroundImage();
         View view = getView();
-        Activity mainActivity = getActivity();
-        final Intent thisIntent = mainActivity.getIntent();
 
         widthEditText = (EditText) view.findViewById(R.id.width_editText_dimensions);
         heightEditText = (EditText) view.findViewById(R.id.height_editText_dimensions);
         setDimensionsButton = (Button) view.findViewById(R.id.set_button_dimensions);
-
+        view.findViewById(R.id.relLayout_dimensions).requestFocus();
         widthEditText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             public void onFocusChange(View v, boolean hasFocus) {
                 if(hasFocus && widthEditText.getText().toString().equals("Width")) {
@@ -70,8 +67,8 @@ public class Dimensions_Fragment extends SherlockFragment {
                 Integer height = Integer.getInteger(heightText,-1);
                 if(width<0 || height<0) Crouton.makeText(getActivity(),"Please Enter Valid Dimensions", Style.ALERT);
                 else    {
-                    thisIntent.putExtra("Width",width.intValue());
-                    thisIntent.putExtra("Height",height.intValue());
+                    GeneratePicture_Activity.Width = width.intValue();
+                    GeneratePicture_Activity.Height = height.intValue();
                 }
             }
         });
@@ -79,14 +76,6 @@ public class Dimensions_Fragment extends SherlockFragment {
     }
 
     public void setBackgroundImage()  {
-    /*    Intent intent = getIntent();
-        String imagePath = intent.getStringExtra("CachedBackgroundLocation");
-        BitmapLruCache.Builder builder = new BitmapLruCache.Builder(getApplicationContext());
-        builder.setMemoryCacheEnabled(true).setMemoryCacheMaxSizeUsingHeapSize();
-        builder.setDiskCacheEnabled(true).setDiskCacheLocation(new File(imagePath));
-
-        BitmapLruCache mCache = builder.build();
-        CacheableBitmapDrawable background = mCache.get("Background");       */
         if(PixelPowerGrapher.mainBackground==null) System.out.println("Even the static one was null :(");
         getView().findViewById(R.id.relLayout_dimensions).setBackground(PixelPowerGrapher.actionbarBackground);
     }

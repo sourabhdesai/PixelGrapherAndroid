@@ -33,9 +33,12 @@ import java.util.concurrent.Executors;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.Log;
 
+import com.example.PixelBin.Outputer;
+import com.example.PixelBin.RGBUtilities;
 import com.google.dexmaker.Code;
 import com.google.dexmaker.DexMaker;
 import com.google.dexmaker.Local;
@@ -268,10 +271,15 @@ public class DexImageScript {
                 int uvbase = uvstart + (row/2) * imageWidth;
                 for(int col=0; col<imageWidth; col++) {
                     // one VU pair of values for every two pixels, round to 2 and take it and the next byte
+                    //imageData is the YUV byte[]
+                    //TODO: There is something up here, something wrong here that makes the blue come out when it isnt supposed to
                     int uvindex = uvbase + (col & ~1);
                     CameraUtils.yuvToRgb(imageData[yindex], imageData[uvindex+1], imageData[uvindex], rgb);
-                    outputPixelBuffer[yindex] = getOutputColorForColorInput(0xff & imageData[yindex], 
+                    outputPixelBuffer[yindex] = getOutputColorForColorInput(255,0,0,0,row,col,imageWidth,imageHeight);  //My modification
+                    /*
+                    outputPixelBuffer[yindex] = getOutputColorForColorInput(0xff & imageData[yindex],
                             rgb[0], rgb[1], rgb[2], row, col, imageWidth, imageHeight);
+                    */
                     yindex++;
                 }
             }
@@ -280,7 +288,11 @@ public class DexImageScript {
             int index = rowStart * imageWidth;
             for(int row=rowStart; row<rowEnd; row++) {
                 for(int col=0; col<imageWidth; col++) {
+                    /*
                     outputPixelBuffer[index] = getOutputColorForGrayscaleInput(0xff & imageData[index], row, col, 
+                            imageWidth, imageHeight);
+                    */
+                    outputPixelBuffer[index] = getOutputColorForGrayscaleInput(255, row, col,
                             imageWidth, imageHeight);
                     index++;
                 }
@@ -307,73 +319,16 @@ public class DexImageScript {
 		return (val>=0) ? val : -val;
 	}
 	
-	public int script_ifeq(int val, int cmp, int trueval, int falseval) {
-		return (val==cmp) ? trueval : falseval;
+	public int script_ifeq(int val, int comparison, int trueval, int falseval) {
+		return (val==comparison) ? trueval : falseval;
 	}
 	
-	public int script_ifgt(int val, int cmp, int trueval, int falseval) {
-		return (val>cmp) ? trueval : falseval;
+	public int script_ifgt(int val, int comparison, int trueval, int falseval) {
+		return (val>comparison) ? trueval : falseval;
 	}
-
-	public int script_getbright(int row, int col) {
-		// if out of range, use nearest edge
-		if (row<0) row = 0;
-		if (row>=imageHeight) row = imageHeight-1;
-		if (col<0) col = 0;
-		if (col>=imageWidth) col = imageWidth-1;
-		return 0xff & imageData[row*imageWidth + col];
-	}
-	
-    public int script_getcolor(int row, int col) {
-        // if out of range, use nearest edge
-        if (row<0) row = 0;
-        if (row>=imageHeight) row = imageHeight-1;
-        if (col<0) col = 0;
-        if (col>=imageWidth) col = imageWidth-1;
-        
-        byte y = imageData[row*imageWidth + col];
-        int uvindex = imageWidth*imageHeight + (row/2)*imageWidth + (col & ~1);
-        return CameraUtils.colorFromYuv(y, imageData[uvindex+1], imageData[uvindex]);
-    }
     
-    public int script_getred(int row, int col) {
-        // if out of range, use nearest edge
-        if (row<0) row = 0;
-        if (row>=imageHeight) row = imageHeight-1;
-        if (col<0) col = 0;
-        if (col>=imageWidth) col = imageWidth-1;
-        
-        byte y = imageData[row*imageWidth + col];
-        int uvindex = imageWidth*imageHeight + (row/2)*imageWidth + (col & ~1);
-        return CameraUtils.redFromYuv(y, imageData[uvindex+1], imageData[uvindex]);
-    }
-    
-    public int script_getgreen(int row, int col) {
-        // if out of range, use nearest edge
-        if (row<0) row = 0;
-        if (row>=imageHeight) row = imageHeight-1;
-        if (col<0) col = 0;
-        if (col>=imageWidth) col = imageWidth-1;
-        
-        byte y = imageData[row*imageWidth + col];
-        int uvindex = imageWidth*imageHeight + (row/2)*imageWidth + (col & ~1);
-        return CameraUtils.greenFromYuv(y, imageData[uvindex+1], imageData[uvindex]);
-    }
-    
-    public int script_getblue(int row, int col) {
-        // if out of range, use nearest edge
-        if (row<0) row = 0;
-        if (row>=imageHeight) row = imageHeight-1;
-        if (col<0) col = 0;
-        if (col>=imageWidth) col = imageWidth-1;
-        
-        byte y = imageData[row*imageWidth + col];
-        int uvindex = imageWidth*imageHeight + (row/2)*(imageHeight/2) + (col & ~1);
-        return CameraUtils.blueFromYuv(y, imageData[uvindex+1], imageData[uvindex]);
-    }
-    
-	public int script_random(int rmax) {
-		return random.nextInt(rmax);
+	public int script_random(int maxRandomValue) {
+		return random.nextInt(maxRandomValue);
 	}
 	
 	public int script_gray(int gray) {
@@ -389,39 +344,9 @@ public class DexImageScript {
 		if (g>255) g = 255;
 		if (b<0) b = 0;
 		if (b>255) b = 255;
-		return 0xff000000 | (r << 16) | (g << 8) | b;
+		return Color.rgb(r, g, b);
 	}
-	
-	// these methods are used by manual user scripts to set individual pixels and perform drawing operations
-    public int script_setrgb(int row, int col, int r, int g, int b) {
-        if (row<0) row = 0;
-        if (row>=imageHeight) row = imageHeight-1;
-        if (col<0) col = 0;
-        if (col>=imageWidth) col = imageWidth-1;
-        
-        outputPixelBuffer[row*imageWidth + col] = 0xff000000 | (r << 16) | (g << 8) | b;
-        return 0;
-    }
-    
-    public int script_setgray(int row, int col, int gray) {
-        if (row<0) row = 0;
-        if (row>=imageHeight) row = imageHeight-1;
-        if (col<0) col = 0;
-        if (col>=imageWidth) col = imageWidth-1;
-        
-        outputPixelBuffer[row*imageWidth + col] = 0xff000000 | (gray << 16) | (gray << 8) | gray;
-        return 0;
-    }
-    
-    public int script_setcolor(int row, int col, int color) {
-        if (row<0) row = 0;
-        if (row>=imageHeight) row = imageHeight-1;
-        if (col<0) col = 0;
-        if (col>=imageWidth) col = imageWidth-1;
-        
-        outputPixelBuffer[row*imageWidth + col] = color;
-        return 0;
-    }
+
     
     public int script_framenumber() {
         return frameNumber;
@@ -500,41 +425,55 @@ public class DexImageScript {
     // math functions
     // trig functions take integer arguments and scale by pi/(Integer.MAX_VALUE+1),
     // this allows overflow to work correctly; MAX_VALUE scales to pi, MAX_VALUE+1=MIN_VALUE scales to -pi.
-    final static double INT_TO_ANGLE = Math.PI/Integer.MAX_VALUE;
-    final static double ANGLE_TO_INT = Integer.MAX_VALUE/Math.PI;
-    
-    /** Returns Math.atan2(y,x) scaled to an int value.
-     */
-    public int script_atan2(int y, int x) {
-        return (int)(ANGLE_TO_INT * Math.atan2(y, x));
-    }
     
     /** Returns Math.sqrt(x*x + y*y) rounded to the nearest int.
      */
     public int script_hypot(int x, int y) {
         return (int)Math.round(Math.sqrt(x*x + y*y));
     }
-    
-    /** Converts a fraction of a full circle to an integer value usable with the sinmult and cosmult functions.
-     * For example, asangle(1,4) corresponds to tau/4 radians, or 90 degrees. (See http://tauday.com)
-     *  
-     */
-    public int script_asangle(int numerator, int denominator) {
-        return (int)(ANGLE_TO_INT*2*numerator/denominator);
+
+    public int script_sin(int x, int scale)   {
+        return (int) (scale*Math.sin(x));
+    }
+
+    public int script_cos(int x, int scale)    {
+        return (int) (scale*Math.cos(x));
     }
     
-    /** Computes the sine of the int-scaled angle multiplied by scale and rounded to the nearest int. 
-     */
-    public int script_sinmult(int angle, int scale) {
-        double theta = INT_TO_ANGLE*angle;
-        return (int)Math.round(Math.sin(theta)*scale);
+    public int script_tan(int x, int scale)    {
+        return (int) (scale*Math.tan(x));
     }
-    
-    /** Computes the cosine of the int-scaled angle multiplied by scale and rounded to the nearest int. 
-     */
-    public int script_cosmult(int angle, int scale) {
-        double theta = INT_TO_ANGLE*angle;
-        return (int)Math.round(Math.cos(theta)*scale);
+
+    public int script_asin(int x, int scale)   {
+        return (int) (scale*Math.asin(x));
+    }
+
+    public int script_acos(int x, int scale)   {
+        return (int) (scale*Math.acos(x));
+    }
+
+    public int script_atan(int x, int scale)   {
+        return (int) (scale*Math.atan(x));
+    }
+
+    public int script_sqrt(int x)   {
+        return (int) Math.sqrt(x);
+    }
+
+    public int script_cbrt(int x)   {
+        return (int) Math.cbrt(x);
+    }
+
+    public int script_mapW(int x,int colorStart,int colorEnd)   {
+        return script_map(x,0,this.imageWidth,colorStart,colorEnd);
+    }
+
+    public int script_mapH(int y,int colorStart,int colorEnd)   {
+        return script_map(y,0,this.imageHeight,colorStart,colorEnd);
+    }
+
+    public int script_map(long x, long in_min, long in_max, long out_min, long out_max)	{
+        return Math.round((x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min);
     }
     /*
     // face detection functions

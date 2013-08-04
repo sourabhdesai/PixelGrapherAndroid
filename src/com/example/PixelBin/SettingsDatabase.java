@@ -25,7 +25,7 @@ public class SettingsDatabase {
      * @param color
      * @param word
      */
-    public SettingsDatabase(String word,int color)  {
+    public SettingsDatabase(String word, int color)  {
         this.color = color;
         this.lattice = new StringPhoneLattice();
         this.lattice.addWord(word);
@@ -38,7 +38,7 @@ public class SettingsDatabase {
      * @param g
      * @param b
      */
-    public SettingsDatabase(String word,int r, int g, int b)  {
+    public SettingsDatabase(String word, int r, int g, int b)  {
         this.color = Color.rgb(r,g,b);
         this.lattice = new StringPhoneLattice();
         this.lattice.addWord(word);

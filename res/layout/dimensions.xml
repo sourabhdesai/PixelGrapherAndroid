@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:text="Width"
                 android:id="@+id/width_editText_dimensions" android:layout_centerHorizontal="true" android:layout_above="@+id/space"
-                android:textSize="25dp" android:textColor="#8fcb00"/>
+                android:textSize="25dp" android:inputType="number" android:textColor="#8fcb00"/>
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -55,6 +55,6 @@
                 android:text="Default Dimensions are of Screen Size"
                 android:id="@+id/textView"
                 android:layout_centerHorizontal="true" android:layout_below="@+id/space3" android:textStyle="italic"
-                android:textColor="#FFFFFF"/>
+                android:textColor="#000000"/>
     </RelativeLayout>
 </LinearLayout>
