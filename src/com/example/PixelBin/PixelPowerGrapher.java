@@ -27,9 +27,7 @@ public class PixelPowerGrapher {
     public static BitmapDrawable mainBackground;
     public static BitmapDrawable actionbarBackground;
 	
-	public static Picture currentPicture =null;
 
-    public static Bitmap createdPicture = null;
 	
 
 	
@@ -96,7 +94,7 @@ public class PixelPowerGrapher {
 				newPic.setPixel(x,y,pixel);
 			}
 		}
-        PixelPowerGrapher.createdPicture = newPic;
+        PictureViewer.createdPicture = newPic;
 		return newPic;
 	}//END OF METHOD---------------------------------------------------------------------------------------------------------------
 	
@@ -649,7 +647,7 @@ public class PixelPowerGrapher {
 
         Picture pic = new Picture(exprR,exprG,exprB,width,height);
 
-        PixelPowerGrapher.currentPicture = pic;
+        PictureViewer.currentPicture = pic;
     }
 
 	public static void fixFormulaFormatting(int Width,int Height,String... formulas)	{

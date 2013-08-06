@@ -1,5 +1,7 @@
 package com.example.PixelBin;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
@@ -10,12 +12,15 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
+import android.view.ViewGroup;
+import android.widget.*;
 import com.example.PixelBin.ThePixelBinActivities.PixelBin_Activity;
 import com.parse.ParseUser;
 import de.neofonie.mobile.app.android.widget.crouton.Crouton;
 import de.neofonie.mobile.app.android.widget.crouton.Style;
+import se.emilsjolander.flipview.FlipView;
 
 /**
  * Created with IntelliJ IDEA.
@@ -38,7 +43,7 @@ public class Home_Activity extends FragmentActivity {
         loggedIn = getIntent().getBooleanExtra("LoggedIn",false); //false is a default value, shouldnt be a big deal really
         this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         if(Build.VERSION.SDK_INT >= 16) setBackgroundImage();
-        ParseUser user = ParseUser.getCurrentUser();
+        final ParseUser user = ParseUser.getCurrentUser();
         if(user != null) {
             loggedIn = true;
         }
@@ -75,9 +80,84 @@ public class Home_Activity extends FragmentActivity {
             }
         });
 
-        ViewPager viewPager = (ViewPager) findViewById(R.id.imageViewer_ViewPager_home);
-        ImageFragmentPageAdapter adapter = new ImageFragmentPageAdapter(getSupportFragmentManager(),getFragments());
-        viewPager.setAdapter(adapter);
+        final FlipView flipView = (FlipView) findViewById(R.id.flipview_home);
+
+        BaseAdapter adapter = new BaseAdapter() {
+            @Override
+            public int getCount() {
+                return 3;  //To change body of implemented methods use File | Settings | File Templates.
+            }
+
+            @Override
+            public Object getItem(int position) {
+                return position;  //To change body of implemented methods use File | Settings | File Templates.
+            }
+
+            @Override
+            public long getItemId(int position) {
+                return position;  //To change body of implemented methods use File | Settings | File Templates.
+            }
+
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                final int pos = position;
+                convertView = getLayoutInflater().inflate(R.layout.image_fragment,null);
+                TextView header = (TextView) convertView.findViewById(R.id.header_textView_imagefragment);
+                TextView footer = (TextView) convertView.findViewById(R.id.footer_textView_imageFragment);
+                ImageView imgView = (ImageView) convertView.findViewById(R.id.imageView_imagefragment);
+                switch (position)   {
+                    case 0:
+                        header.setText("Welcome "+(loggedIn?user.getUsername():""));
+                        footer.setText("Tap here for more info...");
+                        imgView.setImageResource(R.drawable.pixelbin_icon6_square_transparent);
+                        break;
+                    case 1:
+                        header.setText("Share");
+                        footer.setText("Share us on Facebook or Tweet about us on Twitter");
+                        imgView.setImageResource(R.drawable.share);
+                        break;
+                    case 2:
+                        header.setText(loggedIn?"Log Out":"Log In");
+                        imgView.setImageResource(loggedIn ? R.drawable.logout : R.drawable.login);
+                        break;
+                }
+                convertView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        switch(pos) {
+                            case 0:
+                                moveToAboutActivity();
+                                break;
+                            case 1:
+                                moveToShareActivity();
+                                break;
+                            case 2:
+                                moveToLogInOrOutActivity();
+                        }
+                    }
+                });
+                return convertView;  //To change body of implemented methods use File | Settings | File Templates.
+            }
+        };
+        flipView.setAdapter(adapter);
+        final Activity activity = this;
+        Thread peekTimer = new Thread() {
+            public void run()   {
+                try {
+                    sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                } finally {
+                    activity.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            flipView.peakNext(true);
+                        }
+                    });
+                }
+            }
+        };
+        peekTimer.start();
     }
 
     public void moveToGenPicActivity()  {
@@ -147,23 +227,5 @@ public class Home_Activity extends FragmentActivity {
             }
         });
         return fragments;
-    }
-
-    public class ImageFragmentPageAdapter extends FragmentPagerAdapter {
-        private ImageFragment[] imageFragments;
-
-        public ImageFragmentPageAdapter(FragmentManager fm, ImageFragment[] fragments) {
-            super(fm);
-            this.imageFragments = fragments;
-        }
-        @Override
-        public Fragment getItem(int position) {
-            return this.imageFragments[position];
-        }
-
-        @Override
-        public int getCount() {
-            return this.imageFragments.length;
-        }
     }
 }

@@ -36,6 +36,8 @@ public class ImageFragment extends Fragment {
         this.res = resources;
     }
 
+    public ImageFragment()  {}
+
     @Override
     public void onStart() {
         super.onStart();

@@ -272,7 +272,6 @@ public class DexImageScript {
                 for(int col=0; col<imageWidth; col++) {
                     // one VU pair of values for every two pixels, round to 2 and take it and the next byte
                     //imageData is the YUV byte[]
-                    //TODO: There is something up here, something wrong here that makes the blue come out when it isnt supposed to
                     int uvindex = uvbase + (col & ~1);
                     CameraUtils.yuvToRgb(imageData[yindex], imageData[uvindex+1], imageData[uvindex], rgb);
                     outputPixelBuffer[yindex] = getOutputColorForColorInput(255,0,0,0,row,col,imageWidth,imageHeight);  //My modification
@@ -472,8 +471,16 @@ public class DexImageScript {
         return script_map(y,0,this.imageHeight,colorStart,colorEnd);
     }
 
-    public int script_map(long x, long in_min, long in_max, long out_min, long out_max)	{
-        return Math.round((x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min);
+    public int script_map(int x, int in_min, int in_max, int out_min, int out_max)	{
+        return Outputer.mapper(x,in_min,in_max,out_min,out_max);
+    }
+
+    public int script_xor(int x, int y)    {
+        return x^y;
+    }
+
+    public int script_pow(int base, int exponent) {
+        return (int) Math.pow(base,exponent);
     }
     /*
     // face detection functions

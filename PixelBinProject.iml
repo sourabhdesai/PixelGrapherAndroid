@@ -47,6 +47,7 @@
     <orderEntry type="library" name="nineoldandroids" level="project" />
     <orderEntry type="module" module-name="android-square-progressbar" />
     <orderEntry type="module" module-name="StaggeredGridView-master" />
+    <orderEntry type="module" module-name="library" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

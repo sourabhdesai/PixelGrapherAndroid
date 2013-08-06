@@ -123,7 +123,7 @@ public class Picture {
                 int Y = this.height-1-y;
                 int mappedX =Math.round(x/Width)*this.width;
                 int mappedY = Math.round(Y/Height)*this.height;
-                img.setPixel(mappedX,mappedY,this.imageScript.getOutputColorForColorInput(255, 0, 0, 0, mappedY, mappedX, this.width, this.height));
+                img.setPixel(x,y,this.imageScript.getOutputColorForColorInput(255, 0, 0, 0, mappedY, mappedX, this.width, this.height));
             }
         }
         return img;
@@ -135,7 +135,7 @@ public class Picture {
      * @param y
      * @return value at position (x,y)
      */
-    public int getOutputAt(int x, int y)    {
+    public int getPixelAt(int x, int y)    {
         return this.imageScript.getOutputColorForColorInput(255,0,0,0,y,x,this.width,this.height);
     }
 
@@ -145,6 +145,10 @@ public class Picture {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public boolean scriptHasBeenEvaluated() {
+        return this.imageScript != null;
     }
 
 }

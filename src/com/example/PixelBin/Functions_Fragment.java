@@ -152,9 +152,9 @@ public class Functions_Fragment extends SherlockFragment {
 
     public void moveToImageViewer(Bitmap bmp)   {
         Intent intent = new Intent(getActivity(),PictureViewer.class);
-        Picture pic = PixelPowerGrapher.currentPicture;
+        Picture pic = PictureViewer.currentPicture;
         intent.putExtra("Functions",pic.getFormulaR()+"@@"+pic.getFormulaG()+"@@"+pic.getFormulaB()+"@@"+pic.getWidth()+"@@"+pic.getHeight()+"@@*"); //"rfunction@@gfunction@@bfunction@@width@@height@@*"
-        PixelPowerGrapher.createdPicture = bmp;   //Not sure if this will work... Lets try. It would be perfect if it did.
+        PictureViewer.createdPicture = bmp;   //Not sure if this will work... Lets try. It would be perfect if it did.
         startActivity(intent);
     }
 
@@ -177,9 +177,9 @@ public class Functions_Fragment extends SherlockFragment {
                 Outputer.w=width;Outputer.width=width;Outputer.Width=width;
                 Outputer.h=height;Outputer.height=height;Outputer.Height=height;
                 publishProgress("Analyzing Functions...");
-                PixelPowerGrapher.currentPicture = new Picture(inputs[0],inputs[1],inputs[2],width,height);
+                PictureViewer.currentPicture = new Picture(inputs[0],inputs[1],inputs[2],width,height);
                 try {
-                    PixelPowerGrapher.currentPicture.evaluateScripts(getActivity());
+                    PictureViewer.currentPicture.evaluateScripts(getActivity());
                 } catch (IllegalStateException e) {
                     e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
                     publishProgress("E"+e.getMessage());
@@ -192,7 +192,7 @@ public class Functions_Fragment extends SherlockFragment {
                 publishProgress("Generating Bitmap...");
                 Bitmap bitmap = null;
                 try {
-                bitmap = PixelPowerGrapher.currentPicture.generateBitmap();
+                bitmap = PictureViewer.currentPicture.generateBitmap();
                 } catch (ArithmeticException e) {
                     publishProgress("EYou tried to divide by zero!");
                 }
@@ -205,6 +205,7 @@ public class Functions_Fragment extends SherlockFragment {
         protected void onProgressUpdate(String... status)  {
             if (progress == null) {
                 progress= new ProgressDialog(getActivity());
+                progress.setCancelable(false);
             }
             String currentStatus = status[status.length-1];
             if(currentStatus.charAt(0)=='E')  {

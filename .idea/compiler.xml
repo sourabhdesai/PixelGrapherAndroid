@@ -11,6 +11,7 @@
       <directory url="file://$USER_HOME$/Documents/Android-Java Development Assets/StaggeredGridView-master/gen" includeSubdirectories="true" />
       <directory url="file://$USER_HOME$/Documents/Android-Java Development Assets/TabCarouselLib/tabcarousellib/gen" includeSubdirectories="true" />
       <directory url="file://$USER_HOME$/Documents/Android-Java Development Assets/android-square-progressbar-master/android-square-progressbar/gen" includeSubdirectories="true" />
+      <directory url="file://$USER_HOME$/Documents/Android-Java Development Assets/android-FlipView-master/FlipViewLibrary/gen" includeSubdirectories="true" />
     </excludeFromCompile>
     <resourceExtensions />
     <wildcardResourcePatterns>

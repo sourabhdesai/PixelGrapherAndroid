@@ -43,11 +43,13 @@ public class PictureViewer extends Activity {
     private PhotoViewAttacher mAttacher;
     boolean willBeVisibleNext;
     Context context;
-    static Bitmap bitmapImage;
     TextView positionTextView;
     TextView colorTextView;
     Animation fadein;
     Animation fadeout;
+    public static Picture currentPicture =null;
+
+    public static Bitmap createdPicture = null;
 
     @Override
     public void onCreate(Bundle savedInstance)  {
@@ -55,14 +57,12 @@ public class PictureViewer extends Activity {
         setContentView(R.layout.pictureviewer);
         willBeVisibleNext = true;
         context = this;
-
         fadein = AnimationUtils.loadAnimation(this,R.anim.fadein);
         fadeout = AnimationUtils.loadAnimation(this,R.anim.fadeout);
         fadein.setFillAfter(true);
         fadeout.setFillAfter(true);
 
-        Bitmap img = PixelPowerGrapher.createdPicture;
-        bitmapImage = img;
+        Bitmap img = createdPicture;
         img.setHasAlpha(false);
         if(img==null) Log.d("Error yo!","The bitmap from the intent was null");
         imageView = (ImageView) findViewById(R.id.imageView_pictureviewer);
@@ -109,7 +109,7 @@ public class PictureViewer extends Activity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new saveBitmapImage().execute(bitmapImage!=null?bitmapImage:((BitmapDrawable) imageView.getDrawable()).getBitmap());
+                new saveBitmapImage().execute(createdPicture!=null?createdPicture:((BitmapDrawable) imageView.getDrawable()).getBitmap());
             }
         });
 
@@ -120,10 +120,10 @@ public class PictureViewer extends Activity {
         @Override
         public void onPhotoTap(View view, float x, float y) {
             if(view instanceof ImageView)   {
-                int X = Math.round(x*bitmapImage.getWidth());
-                int yInverted = Math.round(y*bitmapImage.getHeight());
-                int Y = bitmapImage.getHeight()-yInverted;
-                int color = bitmapImage.getPixel(X,yInverted);
+                int X = Math.round(x*createdPicture.getWidth());
+                int yInverted = Math.round(y*createdPicture.getHeight());
+                int Y = createdPicture.getHeight()-yInverted;
+                int color = createdPicture.getPixel(X,yInverted);
                 positionTextView.setText("("+X+","+Y+")");
                 int r = RGBUtilities.toRed(color);
                 int g = RGBUtilities.toGreen(color);

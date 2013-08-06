@@ -1,5 +1,6 @@
 package com.example.PixelBin.ThePixelBinActivities;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import com.actionbarsherlock.app.ActionBar;
@@ -26,7 +27,8 @@ public class PixelBin_Activity extends SherlockFragmentActivity {
         ViewPager mViewPager = new ViewPager(this);
         mViewPager.setId(R.id.pager_fragmentactivity);
         setContentView(mViewPager);
-
+        this.setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        mViewPager.setOffscreenPageLimit(3);
         //Setting Up ActionBarSherlock------------------------------------------------------------------------------------------------------------
         ActionBar actionBar=getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);

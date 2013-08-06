@@ -30,12 +30,13 @@ public class Methods_Fragment extends SherlockListFragment{
     View mainView;
 
     public static String[] methodNames = new String[] { "max","min","clamp","abs","ifeq","ifgt","random","hypot","sin","cos","tan","asin",
-            "acos","atan","sqrt","cbrt","mapW","mapH","map"};
+            "acos","atan","sqrt","cbrt","mapW","mapH","map","xor","pow"};
     public static String[] params = {"(int val1, int val2)","(int val1, int val2)","(int val, int min, int max)",
             "(int val)","(int val, int comparison, int trueval, int falseval)",
             "(int val, int comparison, int trueval, int falseval)","(int maxRandomValue)","(int x, int y)","(int x, int scale)",
             "(int x, int scale)","(int x, int scale)","(int x, int scale)","(int x, int scale)","(int x, int scale)",
-            "(int x)","(int x)","(int x,int colorStart,int colorEnd)","(int y,int colorStart,int colorEnd)","(long x, long in_min, long in_max, long out_min, long out_max)"};
+            "(int x)","(int x)","(int x,int colorStart,int colorEnd)","(int y,int colorStart,int colorEnd)",
+            "(long x, long in_min, long in_max, long out_min, long out_max)","(int x, int y)","(int base, int exponent)"};
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstance)  {
 //        getSherlockActivity().setSupportProgressBarIndeterminateVisibility(true);
